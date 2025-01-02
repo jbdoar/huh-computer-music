@@ -1,6 +1,6 @@
 import numpy as np
 
-from hcm.music.const import DURATIONS
+from .const import DURATIONS
 
 
 def scale_constructor(f0, key, num_octaves):
