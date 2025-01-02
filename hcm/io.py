@@ -2,13 +2,9 @@ import numpy as np
 import rx
 import scipy
 import scipy.io
-
 import sounddevice as sd
 
-
-PERIOD_SEC_LEN = 1
-SAMPLE_RATE = 8000
-BLOCK_SIZE = PERIOD_SEC_LEN * SAMPLE_RATE
+from .const import DEFAULT_SAMPLE_RATE
 
 
 def add_channels(signals):
@@ -40,7 +36,7 @@ class AudioOutput(rx.Observer):
 
     def __init__(self,
                  channels=1,
-                 sample_rate: int = SAMPLE_RATE,
+                 sample_rate: int = DEFAULT_SAMPLE_RATE,
                  period_length_sec: int = 1):
         super().__init__()
 

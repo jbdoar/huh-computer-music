@@ -6,9 +6,9 @@ import click
 import rx
 
 import hcm
-from hcm import types
+from hcm import types, DEFAULT_SAMPLE_RATE
 
-SAMPLE_RATE = 8000  # hz
+SAMPLE_RATE = DEFAULT_SAMPLE_RATE  # hz
 INTERVAL_LENGTH = 1000  # ms
 
 WAVES = {'sine': hcm.sine_wave, 'triangle': hcm.sawtooth_wave, 'square': hcm.square_wave}
